@@ -24,9 +24,14 @@
 		<property name="suffix" value=".jsp" />
 	</bean>
 	
-	<!-- add resources director-->
-	<mvc:resources location="/resources/" mapping="/resources/**"></mvc:resources>
-
+	<!-- Load Customer message resource-->
+    <bean id ="messageSource"
+           class = "org.springframework.context.support.ResourceBundleMessageSource">
+           
+           <property name="basenames" value="resources/messages" />
+    </bean>
+    
+    
 </beans>
 
 
